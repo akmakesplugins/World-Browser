@@ -1,0 +1,17 @@
+{
+  "name": "world-sampler",
+  "version": "1.0.0",
+  "description": "World Sampler with a 3D Globe",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "three": "^0.150.1"
+  },
+  "devDependencies": {
+    "vite": "^4.0.0"
+  }
+}
+
