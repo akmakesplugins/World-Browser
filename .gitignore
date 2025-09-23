@@ -2,6 +2,10 @@
 Builds/*
 JuceLibraryCode/*
 
+#Web App
+world-sampler/node_modules
+world-sampler/node_modules/*
+
 # Prerequisites
 *.d
 
