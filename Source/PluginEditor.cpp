@@ -15,16 +15,19 @@ WorldSamplerAudioProcessorEditor::WorldSamplerAudioProcessorEditor (WorldSampler
     using WBC = juce::WebBrowserComponent;
 
     auto options = WBC::Options()
-                       .withNativeIntegrationEnabled(true)
-                       .withEventListener("locationClicked", [this](juce::var args)
-                       {
-                           if (args.hasProperty("lat") && args.hasProperty("lon"))
-                           {
-                               double lat = (double) args["lat"];
-                               double lon = (double) args["lon"];
-                               DBG("Received location from JS -> lat: " << lat << ", lon: " << lon);
-                           }
-                       });
+        .withNativeIntegrationEnabled(true)
+#if JUCE_WINDOWS
+        .withBackend(juce::WebBrowserComponent::Options::Backend::webview2)
+#endif
+        .withEventListener("locationClicked", [this](juce::var args)
+            {
+                if (args.hasProperty("lat") && args.hasProperty("lon"))
+                {
+                    double lat = (double)args["lat"];
+                    double lon = (double)args["lon"];
+                    DBG("Received location from JS -> lat: " << lat << ", lon: " << lon);
+                }
+            });
 
     webView.reset(new WBC(options));
     addAndMakeVisible(*webView);
