@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="pXp6P0" name="WorldSampler" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" defines=" JUCE_USE_WIN_WEBVIEW2=1">
+              addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" defines="JUCE_USE_WIN_WEBVIEW2_WITH_STATIC_LINKING=1">
   <MAINGROUP id="WfNYXB" name="WorldSampler">
     <GROUP id="{24E6EFB8-8701-943F-B1D6-C5A1A8168E6F}" name="Source">
       <FILE id="FdGUPX" name="PluginProcessor.cpp" compile="1" resource="0"

@@ -32,7 +32,7 @@ WorldSamplerAudioProcessorEditor::WorldSamplerAudioProcessorEditor (WorldSampler
     addAndMakeVisible(*webView);
 
     setSize(800, 600);
-    webView->goToURL("http://localhost:3000"); // dev server
+    webView->goToURL("http://localhost:5173"); // dev server
 }
 
 WorldSamplerAudioProcessorEditor::~WorldSamplerAudioProcessorEditor() {}
