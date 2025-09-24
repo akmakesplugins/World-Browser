@@ -16,9 +16,8 @@ WorldSamplerAudioProcessorEditor::WorldSamplerAudioProcessorEditor (WorldSampler
 
     auto options = WBC::Options()
         .withNativeIntegrationEnabled(true)
-#if JUCE_WINDOWS
+
         .withBackend(juce::WebBrowserComponent::Options::Backend::webview2)
-#endif
         .withEventListener("locationClicked", [this](juce::var args)
             {
                 if (args.hasProperty("lat") && args.hasProperty("lon"))
@@ -33,7 +32,7 @@ WorldSamplerAudioProcessorEditor::WorldSamplerAudioProcessorEditor (WorldSampler
     addAndMakeVisible(*webView);
 
     setSize(800, 600);
-    webView->goToURL("http://localhost:5173"); // dev server
+    webView->goToURL("http://localhost:3000"); // dev server
 }
 
 WorldSamplerAudioProcessorEditor::~WorldSamplerAudioProcessorEditor() {}
