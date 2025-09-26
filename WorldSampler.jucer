@@ -4,6 +4,10 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" defines="JUCE_USE_WIN_WEBVIEW2_WITH_STATIC_LINKING=1">
   <MAINGROUP id="WfNYXB" name="WorldSampler">
     <GROUP id="{24E6EFB8-8701-943F-B1D6-C5A1A8168E6F}" name="Source">
+      <GROUP id="{50EA0497-A8FA-8F32-BB3A-BDE85383D473}" name="httplib">
+        <FILE id="DI7ecs" name="httplib.h" compile="0" resource="0" file="Source/httplib/httplib.h"/>
+        <FILE id="CLQR9S" name="HttpServer.h" compile="0" resource="0" file="Source/httplib/HttpServer.h"/>
+      </GROUP>
       <GROUP id="{D73C69A5-9F4A-876B-C441-B4D7EEB3E210}" name="Resources">
         <GROUP id="{5F1D6019-08EE-E60C-60DF-8411D55D2971}" name="dist">
           <GROUP id="{AE10D40B-EAE2-9372-2D33-1EB624BC6614}" name="assets">

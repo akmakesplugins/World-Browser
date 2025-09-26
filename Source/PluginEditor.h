@@ -10,6 +10,7 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "httplib/HttpServer.h"
 
 class WorldSamplerAudioProcessorEditor  : public juce::AudioProcessorEditor
 {
@@ -24,6 +25,8 @@ private:
 
     // WebBrowserComponent for the globe UI
     std::unique_ptr<juce::WebBrowserComponent> webView;
+
+    std::unique_ptr<HttplibServer> httpServer;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (WorldSamplerAudioProcessorEditor)
 };
