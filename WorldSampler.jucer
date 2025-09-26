@@ -4,6 +4,18 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1" defines="JUCE_USE_WIN_WEBVIEW2_WITH_STATIC_LINKING=1">
   <MAINGROUP id="WfNYXB" name="WorldSampler">
     <GROUP id="{24E6EFB8-8701-943F-B1D6-C5A1A8168E6F}" name="Source">
+      <GROUP id="{D73C69A5-9F4A-876B-C441-B4D7EEB3E210}" name="Resources">
+        <GROUP id="{5F1D6019-08EE-E60C-60DF-8411D55D2971}" name="dist">
+          <GROUP id="{AE10D40B-EAE2-9372-2D33-1EB624BC6614}" name="assets">
+            <FILE id="gFuXDf" name="earth.jpg" compile="0" resource="1" file="Resources/dist/assets/earth.jpg"/>
+            <FILE id="wy7Mqe" name="index-57484daa.js" compile="0" resource="1"
+                  file="Resources/dist/assets/index-57484daa.js"/>
+            <FILE id="N1NgvG" name="index-c769f1cc.css" compile="0" resource="1"
+                  file="Resources/dist/assets/index-c769f1cc.css"/>
+          </GROUP>
+          <FILE id="Figr0F" name="index.html" compile="0" resource="1" file="Resources/dist/index.html"/>
+        </GROUP>
+      </GROUP>
       <FILE id="FdGUPX" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="FTKf2b" name="PluginProcessor.h" compile="0" resource="0"
@@ -53,7 +65,7 @@
     <VS2022 targetFolder="Builds/VisualStudio2022" externalLibraries="WebView2LoaderStatic.lib">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" headerPath="../../Submodules/webview2/build/native/include"
-                       libraryPath="../../Submodules/webview2/build/native/x64"/>
+                       libraryPath="../../Submodules/webview2/build/native/x64" postbuildCommand="xcopy /E /I /Y &quot;$(ProjectDir)..\..\Resources\dist&quot; &quot;$(TargetDir)dist\&quot;&#10;"/>
         <CONFIGURATION isDebug="0" name="Release" libraryPath="../../Submodules/webview2/build/native/x64"
                        headerPath="../../Submodules/webview2/build/native/include"/>
       </CONFIGURATIONS>
